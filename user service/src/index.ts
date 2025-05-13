@@ -17,6 +17,8 @@ const connectDb = async () => {
 
 const app = express();
 
+app.use(express.json()); //to read json values from body of request object of express
+
 app.use("/api/v1", userRoutes);
 
 app.get('/', (req, res) => {
